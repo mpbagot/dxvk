@@ -21,8 +21,10 @@ dxvk_include_path = include_directories('./include')
 
 if (cpu_family == 'x86_64')
   dxvk_library_path = meson.source_root() + '/lib'
-else
+elif (cpu_family == 'x86')
   dxvk_library_path = meson.source_root() + '/lib32'
+elif (cpu_family == 'aarch64')
+  dxvk_library_path = meson.source_root() + '/libarm64'
 endif
 
 dxvk_extradep = [ ]
