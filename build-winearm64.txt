@@ -1,0 +1,19 @@
+[binaries]
+c = 'winegcc'
+cpp = 'wineg++'
+ar = 'ar'
+strip = 'strip'
+
+[properties]
+needs_exe_wrapper = true
+
+c_args=['-march=native', '-fvisibility=hidden']
+cpp_args=['-march=native', '-fvisibility=hidden', '-fvisibility-inlines-hidden', '-D__WIDL_objidl_generated_name_0000000C=']
+cpp_link_args=['-march=native', '-mwindows']
+
+[host_machine]
+system = 'linux'
+cpu_family = 'aarch64'
+cpu = 'aarch64'
+endian = 'little'
+
